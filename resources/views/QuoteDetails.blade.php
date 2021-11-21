@@ -1,0 +1,1 @@
+<h1>Quote details</h1>
