@@ -14,7 +14,7 @@ class OrdersController extends Controller
      */
     public function index()
     {
-        //
+        return view('orderdetails');
     }
 
     /**
@@ -35,7 +35,7 @@ class OrdersController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        return "from order post";
     }
 
     /**

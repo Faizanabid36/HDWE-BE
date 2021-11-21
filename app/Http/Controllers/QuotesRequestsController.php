@@ -14,7 +14,7 @@ class QuotesRequestsController extends Controller
      */
     public function index()
     {
-        //
+        return view('quotedetails');
     }
 
     /**
@@ -35,7 +35,7 @@ class QuotesRequestsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        return "from quote post";
     }
 
     /**

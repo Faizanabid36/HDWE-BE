@@ -13,8 +13,10 @@ class VisitRequestsController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
+
     {
-        //
+        
+        return view('screendetails');
     }
 
     /**
@@ -24,7 +26,7 @@ class VisitRequestsController extends Controller
      */
     public function create()
     {
-        //
+        return "from creat";
     }
 
     /**
@@ -35,7 +37,7 @@ class VisitRequestsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        return "from visitor post";
     }
 
     /**

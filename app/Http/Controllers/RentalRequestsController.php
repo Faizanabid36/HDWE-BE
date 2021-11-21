@@ -14,7 +14,7 @@ class RentalRequestsController extends Controller
      */
     public function index()
     {
-        //
+        return view('rentaldetails');
     }
 
     /**
@@ -35,7 +35,7 @@ class RentalRequestsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        return "from rental post";
     }
 
     /**
