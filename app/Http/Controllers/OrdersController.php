@@ -35,7 +35,18 @@ class OrdersController extends Controller
      */
     public function store(Request $request)
     {
-        return "from order post";
+        $this->validate($request, [
+            'delivery_date' => 'required',
+            'reciever_name' => 'required',
+            'delivery_adress' => 'required',
+            'cell' => 'required',
+            'fop' => 'required',
+            'item_description' => 'required',
+            
+        ]);
+        
+        orders::create($request->all());
+        return ['message' => 'order has been created'];
     }
 
     /**

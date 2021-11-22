@@ -35,7 +35,18 @@ class QuotesRequestsController extends Controller
      */
     public function store(Request $request)
     {
-        return "from quote post";
+        $this->validate($request, [
+            'delivery_date' => 'required',
+            'reciever_name' => 'required',
+            'delivery_adress' => 'required',
+            'cell' => 'required',
+            'payment_type' => 'required',
+            'item_description' => 'required',
+            
+        ]);
+        
+        quotes_requests::create($request->all());
+        return ['message' => 'quote has been created'];
     }
 
     /**

@@ -37,7 +37,18 @@ class VisitRequestsController extends Controller
      */
     public function store(Request $request)
     {
-        return "from visitor post";
+        $this->validate($request, [
+            'visit_date' => 'required',
+            'requestor_name' => 'required',
+            'adress' => 'required',
+            'cell' => 'required',
+            'comments' => 'required',
+            
+            
+            
+        ]);
+        visit_requests::create($request->all());
+        return ['message' => 'visitor requests has been created'];
     }
 
     /**

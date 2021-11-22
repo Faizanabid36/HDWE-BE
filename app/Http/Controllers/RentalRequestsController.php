@@ -35,7 +35,22 @@ class RentalRequestsController extends Controller
      */
     public function store(Request $request)
     {
-        return "from rental post";
+        $this->validate($request, [
+            'date' => 'required',
+            'time_period' => 'required',
+            'opt_select' => 'required',
+            'options' => 'required',
+            'tools_description' => 'required',
+            'reciever_name' => 'required',
+            'delivery_adress' => 'required',
+            'cell' => 'required',
+            'payment_type' => 'required',
+            
+            
+        ]);
+        
+        rental_requests::create($request->all());
+        return ['message' => 'rental has been created'];
     }
 
     /**

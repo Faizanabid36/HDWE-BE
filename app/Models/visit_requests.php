@@ -7,5 +7,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class visit_requests extends Model
 {
-    use HasFactory;
+    protected $guarded = [];
+
 }
