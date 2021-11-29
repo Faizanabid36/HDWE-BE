@@ -5,8 +5,8 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class visit_requests extends Model
+class QuoteRequest extends Model
 {
-    protected $guarded = [];
-
+    use HasFactory;
+    protected $table = 'quotes_requests';
 }

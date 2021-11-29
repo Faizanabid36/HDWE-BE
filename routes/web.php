@@ -17,10 +17,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Auth::routes(['register' => false]);
-Route::get('/screendetails', [App\Http\Controllers\VisitRequestsController::class, 'index'])->name('screen');
-Route::get('/rentaldetails', [App\Http\Controllers\RentalRequestsController::class, 'index'])->name('rental');
-Route::get('/quotedetails', [App\Http\Controllers\QuotesRequestsController::class, 'index'])->name('quote');
-Route::get('/orderdetails', [App\Http\Controllers\OrdersController::class, 'index'])->name('order');
+Auth::routes();
+Route::get('/visit_requests', [App\Http\Controllers\VisitRequestsController::class, 'index'])->name('visit_requests');
+Route::get('/rental_requests', [App\Http\Controllers\RentalRequestsController::class, 'index'])->name('rental_requests');
+Route::get('/quote_requests', [App\Http\Controllers\QuotesRequestsController::class, 'index'])->name('quote_requests');
+Route::get('/orders', [App\Http\Controllers\OrdersController::class, 'index'])->name('orders');
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

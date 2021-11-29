@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\rental_requests;
+use App\Models\RentalRequest;
 use Illuminate\Http\Request;
 
 class RentalRequestsController extends Controller
@@ -14,7 +14,7 @@ class RentalRequestsController extends Controller
      */
     public function index()
     {
-        return view('rentaldetails');
+        return view('rental_requests');
     }
 
     /**
@@ -45,21 +45,21 @@ class RentalRequestsController extends Controller
             'delivery_adress' => 'required',
             'cell' => 'required',
             'payment_type' => 'required',
-            
-            
+
+
         ]);
-        
-        rental_requests::create($request->all());
+
+        RentalRequest::create($request->all());
         return ['message' => 'rental has been created'];
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\rental_requests  $rental_requests
+     * @param  \App\Models\RentalRequest  $RentalRequest
      * @return \Illuminate\Http\Response
      */
-    public function show(rental_requests $rental_requests)
+    public function show(RentalRequest $RentalRequest)
     {
         //
     }
@@ -67,10 +67,10 @@ class RentalRequestsController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\rental_requests  $rental_requests
+     * @param  \App\Models\RentalRequest  $RentalRequest
      * @return \Illuminate\Http\Response
      */
-    public function edit(rental_requests $rental_requests)
+    public function edit(RentalRequest $RentalRequest)
     {
         //
     }
@@ -79,10 +79,10 @@ class RentalRequestsController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\rental_requests  $rental_requests
+     * @param  \App\Models\RentalRequest  $RentalRequest
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, rental_requests $rental_requests)
+    public function update(Request $request, RentalRequest $RentalRequest)
     {
         //
     }
@@ -90,10 +90,10 @@ class RentalRequestsController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\rental_requests  $rental_requests
+     * @param  \App\Models\RentalRequest  $RentalRequest
      * @return \Illuminate\Http\Response
      */
-    public function destroy(rental_requests $rental_requests)
+    public function destroy(RentalRequest $RentalRequest)
     {
         //
     }

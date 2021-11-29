@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\quotes_requests;
+use App\Models\QuoteRequest;
 use Illuminate\Http\Request;
 
 class QuotesRequestsController extends Controller
@@ -14,7 +14,7 @@ class QuotesRequestsController extends Controller
      */
     public function index()
     {
-        return view('quotedetails');
+        return view('quote_requests');
     }
 
     /**
@@ -42,20 +42,20 @@ class QuotesRequestsController extends Controller
             'cell' => 'required',
             'payment_type' => 'required',
             'item_description' => 'required',
-            
+
         ]);
-        
-        quotes_requests::create($request->all());
+
+        QuoteRequest::create($request->all());
         return ['message' => 'quote has been created'];
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\quotes_requests  $quotes_requests
+     * @param  \App\Models\QuoteRequest  $QuoteRequest
      * @return \Illuminate\Http\Response
      */
-    public function show(quotes_requests $quotes_requests)
+    public function show(QuoteRequest $QuoteRequest)
     {
         //
     }
@@ -63,10 +63,10 @@ class QuotesRequestsController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\quotes_requests  $quotes_requests
+     * @param  \App\Models\QuoteRequest  $QuoteRequest
      * @return \Illuminate\Http\Response
      */
-    public function edit(quotes_requests $quotes_requests)
+    public function edit(QuoteRequest $QuoteRequest)
     {
         //
     }
@@ -75,10 +75,10 @@ class QuotesRequestsController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\quotes_requests  $quotes_requests
+     * @param  \App\Models\QuoteRequest  $QuoteRequest
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, quotes_requests $quotes_requests)
+    public function update(Request $request, QuoteRequest $QuoteRequest)
     {
         //
     }
@@ -86,10 +86,10 @@ class QuotesRequestsController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\quotes_requests  $quotes_requests
+     * @param  \App\Models\QuoteRequest  $QuoteRequest
      * @return \Illuminate\Http\Response
      */
-    public function destroy(quotes_requests $quotes_requests)
+    public function destroy(QuoteRequest $QuoteRequest)
     {
         //
     }

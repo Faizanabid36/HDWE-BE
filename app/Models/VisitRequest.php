@@ -5,7 +5,8 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class rental_requests extends Model
+class VisitRequest extends Model
 {
-    protected $guarded = [];
+    use HasFactory;
+    protected $table = 'visit_requests';
 }

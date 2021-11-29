@@ -1,0 +1,19 @@
+.btn-link{
+    font-weight: 600!important;
+    color: #000000!important;
+    text-decoration: underline!important;
+}
+.btn-primary{
+    background-color: #3e3e3e !important;
+    border-color: #272727 !important;
+}
+
+.form-control:focus{
+    border-color: #3e3e3e !important;
+    box-shadow: 0 0 0 0.2rem rgb(180 180 180 / 27%) !important;
+}
+
+.card-header{
+    background-color: #3e3e3e !important;
+    color: white;
+}

@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\visit_requests;
+use App\Models\VisitRequest;
 use Illuminate\Http\Request;
 
 class VisitRequestsController extends Controller
@@ -13,10 +13,8 @@ class VisitRequestsController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
-
     {
-        
-        return view('screendetails');
+        return view('visit_requests');
     }
 
     /**
@@ -43,21 +41,18 @@ class VisitRequestsController extends Controller
             'adress' => 'required',
             'cell' => 'required',
             'comments' => 'required',
-            
-            
-            
         ]);
-        visit_requests::create($request->all());
+        VisitRequest::create($request->all());
         return ['message' => 'visitor requests has been created'];
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\visit_requests  $visit_requests
+     * @param  \App\Models\VisitRequest  $VisitRequest
      * @return \Illuminate\Http\Response
      */
-    public function show(visit_requests $visit_requests)
+    public function show(VisitRequest $VisitRequest)
     {
         //
     }
@@ -65,10 +60,10 @@ class VisitRequestsController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\visit_requests  $visit_requests
+     * @param  \App\Models\VisitRequest  $VisitRequest
      * @return \Illuminate\Http\Response
      */
-    public function edit(visit_requests $visit_requests)
+    public function edit(VisitRequest $VisitRequest)
     {
         //
     }
@@ -77,10 +72,10 @@ class VisitRequestsController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\visit_requests  $visit_requests
+     * @param  \App\Models\VisitRequest  $VisitRequest
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, visit_requests $visit_requests)
+    public function update(Request $request, VisitRequest $VisitRequest)
     {
         //
     }
@@ -88,10 +83,10 @@ class VisitRequestsController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\visit_requests  $visit_requests
+     * @param  \App\Models\VisitRequest  $VisitRequest
      * @return \Illuminate\Http\Response
      */
-    public function destroy(visit_requests $visit_requests)
+    public function destroy(VisitRequest $VisitRequest)
     {
         //
     }
