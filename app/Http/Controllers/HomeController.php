@@ -3,6 +3,10 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\RentalRequest;
+use App\Models\QuoteRequest;
+use App\Models\VisitRequest;
+use App\Models\Order;
 
 class HomeController extends Controller
 {
@@ -23,6 +27,10 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $RentalCount=RentalRequest::all()->count();
+        $OrderCount=Order::all()->count();
+        $QuotCount=QuoteRequest::all()->count();
+        $VisitRequest=VisitRequest::all()->count();
+        return view('home',compact('RentalCount','OrderCount','QuotCount','VisitRequest'));
     }
 }
