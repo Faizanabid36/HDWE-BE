@@ -9,4 +9,5 @@ class QuoteRequest extends Model
 {
     use HasFactory;
     protected $table = 'quotes_requests';
+    protected $guarded=[];
 }
