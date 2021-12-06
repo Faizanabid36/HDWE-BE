@@ -9,4 +9,5 @@ class VisitRequest extends Model
 {
     use HasFactory;
     protected $table = 'visit_requests';
+    protected $guarded=[];
 }

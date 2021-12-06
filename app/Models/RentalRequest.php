@@ -9,4 +9,5 @@ class RentalRequest extends Model
 {
     use HasFactory;
     protected $table = 'rental_requests';
+    protected $guarded=[];
 }
