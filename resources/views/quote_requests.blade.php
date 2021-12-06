@@ -9,30 +9,28 @@
                     <thead class="thead-dark">
                         <tr>
                             <th scope="col">#</th>
-                            <th scope="col">First</th>
-                            <th scope="col">Last</th>
-                            <th scope="col">Handle</th>
+                            <th scope="col">Reciever Name</th>
+                            <th scope="col">Delivery Date</th>
+                            <th scope="col">delivery Address</th>
+                            <th scope="col">Contact</th>
+                            <th scope="col">Form Of Payment</th>
+                            <th scope="col">Descrption</th>
                         </tr>
                     </thead>
                     <tbody>
+                        @foreach ($quotedata as $data)
+                           
+                       
                         <tr>
-                            <th scope="row">1</th>
-                            <td>Mark</td>
-                            <td>Otto</td>
-                            <td>@mdo</td>
+                            <th scope="row">{{$data->id}}</th>
+                            <td>{{$data->reciever_name}}</td>
+                            <td>{{$data->delivery_date}}</td>
+                            <td>{{$data->delivery_adress}}</td>
+                            <td>{{$data->cell}}</td>
+                            <td>{{$data->payment_type}}</td>
+                            <td>{{$data->item_description}}</td>
                         </tr>
-                        <tr>
-                            <th scope="row">2</th>
-                            <td>Jacob</td>
-                            <td>Thornton</td>
-                            <td>@fat</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">3</th>
-                            <td>Larry</td>
-                            <td>the Bird</td>
-                            <td>@twitter</td>
-                        </tr>
+                        @endforeach
                     </tbody>
                 </table>
             </div>

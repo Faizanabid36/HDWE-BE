@@ -9,30 +9,27 @@
                     <thead class="thead-dark">
                         <tr>
                             <th scope="col">#</th>
-                            <th scope="col">First</th>
-                            <th scope="col">Last</th>
-                            <th scope="col">Handle</th>
+                            <th scope="col">Requestor Name</th>
+                            <th scope="col">Visit Date</th>
+                            <th scope="col">Address</th>
+                            <th scope="col">Contact</th>
+                            <th scope="col">Comment</th>
                         </tr>
                     </thead>
                     <tbody>
+                        @foreach ($visitdata as $data)
+                           
+                       
                         <tr>
-                            <th scope="row">1</th>
-                            <td>Mark</td>
-                            <td>Otto</td>
-                            <td>@mdo</td>
+                            <th scope="row">{{$data->id}}</th>
+                            <td>{{$data->requestor_name}}</td>
+                            <td>{{$data->visit_date}}</td>
+                            <td>{{$data->adress}}</td>
+                            <td>{{$data->cell}}</td>
+                            <td>{{$data->comments}}</td>
                         </tr>
-                        <tr>
-                            <th scope="row">2</th>
-                            <td>Jacob</td>
-                            <td>Thornton</td>
-                            <td>@fat</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">3</th>
-                            <td>Larry</td>
-                            <td>the Bird</td>
-                            <td>@twitter</td>
-                        </tr>
+                        @endforeach
+                      
                     </tbody>
                 </table>
             </div>

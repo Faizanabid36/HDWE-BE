@@ -14,7 +14,9 @@ class QuotesRequestsController extends Controller
      */
     public function index()
     {
-        return view('quote_requests');
+        $quotedata=QuoteRequest::all();
+
+        return view('quote_requests',compact('quotedata'));
     }
 
     /**

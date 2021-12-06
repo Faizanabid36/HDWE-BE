@@ -14,7 +14,10 @@ class VisitRequestsController extends Controller
      */
     public function index()
     {
-        return view('visit_requests');
+        $visitdata=VisitRequest::all();
+        
+
+        return view('visit_requests',compact('visitdata'));
     }
 
     /**

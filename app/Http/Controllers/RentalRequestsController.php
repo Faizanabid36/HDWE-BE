@@ -14,7 +14,9 @@ class RentalRequestsController extends Controller
      */
     public function index()
     {
-        return view('rental_requests');
+        $RentalData=RentalRequest::all();
+       
+        return view('rental_requests',compact('RentalData'));
     }
 
     /**
